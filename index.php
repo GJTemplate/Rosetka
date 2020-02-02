@@ -50,6 +50,12 @@ tplRosetkaHelper::setMetadata();
     </script>
 
 </head>
+<?php
+//$app = JFactory::getApplication() ;
+//$app->enqueueMessage('Redirect to another page was successful', 'success');
+
+
+?>
 <body class="<?php echo tplRosetkaHelper::setBodySuffix(); ?>">
     <div class="wrapper central-wrapper">
         <?php
@@ -57,7 +63,9 @@ tplRosetkaHelper::setMetadata();
         # /templates/rosetka/html/layouts/blocks/header.php
         echo JLayoutHelper::render('blocks.header');
         ?>
+        <jdoc:include type="message" />
     </div>
+
 
 
 <?php echo tplRosetkaHelper::setAnalytics(0, 'your-analytics-id'); ?>
@@ -75,7 +83,7 @@ tplRosetkaHelper::setMetadata();
 </nav>
 
 <main id="main">
-    <jdoc:include type="message"/>
+
     <jdoc:include type="component"/>
 </main>
 

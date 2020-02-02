@@ -23,17 +23,26 @@ defined('_JEXEC') or die;
  *
  * NOTICE: All chrome wrapping methods should be named: modChrome_{STYLE} and take the same
  * two arguments.
+ *
+ * @since 3.9
  */
+
+
 
 /*
  * Module chrome for rendering the module in a submenu
  */
 function modChrome_no($module, &$params, &$attribs)
 {
+	echo ' <!-- '.$module->title.' -->';
+	echo '<div id="modID_'.$module->id.'">';
+
 	if ($module->content)
 	{
 		echo $module->content;
 	}
+	echo '</div>';
+	echo '<!---->';
 }
 
 function modChrome_well($module, &$params, &$attribs)

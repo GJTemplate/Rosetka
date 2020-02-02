@@ -26,7 +26,7 @@ $doc->addStyleSheet( '/templates/rosetka/css/layouts.block.header-header-bottoml
         <div class="layout">
             <div class="header-topline">
 
-                <jdoc:include type="modules" name="header-phones" style="none"/>
+                <jdoc:include type="modules" name="header-phones" style="no"/>
 
 
                 <ul class="header-topline__links">
