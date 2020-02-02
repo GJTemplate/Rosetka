@@ -240,6 +240,8 @@ class TplRosetkaHelper
 	 */
 	static public function loadCss()
 	{
+
+		HTMLHelper::_('stylesheet', 'css-reset.css', ['version' => 'auto', 'relative' => true]);
 		HTMLHelper::_('stylesheet', 'template.css', ['version' => 'auto', 'relative' => true]);
 
 		// Check for a custom CSS file

@@ -23,9 +23,43 @@ tplRosetkaHelper::setMetadata();
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
-	<jdoc:include type="head" />
+
+
+    <jdoc:include type="head"/>
+	<?php
+	# Расположение слоя
+	# /templates/rosetka/html/layouts/blocks/header.php
+	// echo JLayoutHelper::render('sprite.svg');
+	?>
+    <svg style="display: none;">
+        <defs id="symbols"></defs>
+    </svg>
+    <script>
+        loadSprite("/templates/rosetka/assets/img/icons/sprite.svg")
+        function loadSprite (e) {
+            var t = new XMLHttpRequest;
+            t.open('GET', e, !0), t.onload = function () {
+                t.readyState === t.DONE && 200 === t.status && function (e) {
+                    for (var t = (new DOMParser).parseFromString(e, 'text/xml').getElementsByTagName('symbol'), n = 0; n < t.length; n++) {
+                        var o = t.item(n).cloneNode(!0);
+                        document.getElementById('symbols').appendChild(o);
+                    }
+                }(t.responseText);
+            }, t.send();
+        }
+    </script>
+
 </head>
 <body class="<?php echo tplRosetkaHelper::setBodySuffix(); ?>">
+    <div class="wrapper central-wrapper">
+        <?php
+        # Расположение слоя
+        # /templates/rosetka/html/layouts/blocks/header.php
+        echo JLayoutHelper::render('blocks.header');
+        ?>
+    </div>
+
+
 <?php echo tplRosetkaHelper::setAnalytics(0, 'your-analytics-id'); ?>
 
 <a href="#main" class="sr-only sr-only-focusable"><?php echo Text::_('TPL_ROSETKA_SKIP_LINK_LABEL'); ?></a>
@@ -36,27 +70,27 @@ tplRosetkaHelper::setMetadata();
     <?php endif; ?>
 </a>
 
-<nav role="navigation" >
-	<jdoc:include type="modules" name="position-0" style="none" />
+<nav role="navigation">
+    <jdoc:include type="modules" name="position-0" style="none"/>
 </nav>
 
 <main id="main">
-	<jdoc:include type="message" />
-	<jdoc:include type="component" />
+    <jdoc:include type="message"/>
+    <jdoc:include type="component"/>
 </main>
 
 <aside>
     <?php if ($this->countModules('position-1')) : ?>
-		<jdoc:include type="modules" name="position-1" style="none" />
-	<?php endif; ?>
+        <jdoc:include type="modules" name="position-1" style="none"/>
+    <?php endif; ?>
 </aside>
 
 <Rosetkater>
-	<jdoc:include type="modules" name="Rosetkater" style="none" />
-	<p>
-		&copy; <?php echo date('Y'); ?> <?php echo tplRosetkaHelper::getSitename(); ?>
-	</p>
+    <jdoc:include type="modules" name="Rosetkater" style="none"/>
+    <p>
+        &copy; <?php echo date('Y'); ?> <?php echo tplRosetkaHelper::getSitename(); ?>
+    </p>
 </Rosetkater>
-<jdoc:include type="modules" name="debug" style="none" />
+<jdoc:include type="modules" name="debug" style="none"/>
 </body>
 </html>

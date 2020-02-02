@@ -1,0 +1,115 @@
+.preloader {
+    position: fixed;
+    z-index: 2000;
+    height: 4px;
+    width: 100%;
+    background-color: #ebebeb;
+    background-clip: padding-box;
+    overflow: hidden;
+}
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    min-height: inherit;
+    background-color: #122538;
+}
+.layout {
+    display: block;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header-topline {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 8px;
+}
+.header-phones {
+    position: relative;
+    margin-right: 24px;
+}
+.header-phones__icon {
+    margin-right: 4px;
+    margin-bottom: -2px;
+    fill: #fff;
+}
+
+
+@media (min-width: 768px){
+    .layout {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+@media (min-width: 1024px){
+    .layout {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+@media (min-width: 1025px){
+    .header {
+        position: relative;
+    }
+    .header-topline {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+
+.link-dashed {
+    border-bottom: 1px dashed;
+}
+.header-phones__button {
+    padding: 0;
+    background: 0 0;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
