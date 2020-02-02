@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
     <name>Rosetka</name>
-    <version>1.4</version>
+    <version>1.6</version>
     <creationDate>01.02.2020</creationDate>
     <author>oleg</author>
     <authorEmail>your@email.com</authorEmail>
@@ -62,7 +62,7 @@
     </config>
     <updateservers>
         <!-- Note: No spaces or linebreaks allowed between the server tags -->
-        <server type="extension" enabled="1" priority="1" name="Lib GNZ11 Update Site">https://raw.githubusercontent.com/GJTemplate/Rosetka/master/update_server.xml</server>
+        <server type="extension" enabled="1" priority="1" name="Rosetka Template for Joomla 3.x Update Site">https://raw.githubusercontent.com/GJTemplate/Rosetka/master/update_server.xml</server>
     </updateservers>
 
 
