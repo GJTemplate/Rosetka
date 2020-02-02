@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
     <name>Rosetka</name>
-    <version>1.3</version>
+    <version>1.4</version>
     <creationDate>01.02.2020</creationDate>
     <author>oleg</author>
     <authorEmail>your@email.com</authorEmail>
@@ -17,6 +17,8 @@
         <filename>templateDetails.xml</filename>
         <filename>template_preview.png</filename>
         <filename>template_thumbnail.png</filename>
+        <filename>LICENSE</filename>
+        <filename>README.md</filename>
         <folder>assets</folder>
         <folder>css</folder>
         <folder>html</folder>
