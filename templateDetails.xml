@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
     <name>Rosetka</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <creationDate>01.02.2020</creationDate>
     <author>oleg</author>
     <authorEmail>your@email.com</authorEmail>
@@ -17,6 +17,7 @@
         <filename>templateDetails.xml</filename>
         <filename>template_preview.png</filename>
         <filename>template_thumbnail.png</filename>
+        <folder>assets</folder>
         <folder>css</folder>
         <folder>html</folder>
         <folder>images</folder>
@@ -25,6 +26,7 @@
     </files>
 
     <positions>
+        <position>header-phones</position>
         <position>debug</position>
         <position>position-0</position>
         <position>position-1</position>
@@ -56,5 +58,11 @@
             </fieldset>
         </fields>
     </config>
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" enabled="1" priority="1" name="Lib GNZ11 Update Site">https://raw.githubusercontent.com/GJTemplate/Rosetka/master/update_server.xml</server>
+    </updateservers>
+
+
 </extension>
 <!-- https://github.com/GJTemplate/Rosetka/archive/master.zip -->

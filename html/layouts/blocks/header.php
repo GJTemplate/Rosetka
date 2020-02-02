@@ -25,6 +25,9 @@ $doc->addStyleSheet( '/templates/rosetka/css/layouts.block.header-header-bottoml
     <header class="header">
         <div class="layout">
             <div class="header-topline">
+
+                <jdoc:include type="modules" name="header-phones" style="none"/>
+
                 <div class="header-phones">
                     <svg aria-hidden="true" class="header-phones__icon" height="12" width="12">
                         <use xlink:href="#icon-phone" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
